@@ -1,42 +1,8 @@
-import React from 'react';
-// import logo from '/logo.svg'
-import './App.css';
-import Nav from './Nav';
-import About from './About';
-import Shop from './Shop';
-// import Cards from './Cards';
-// import Card from 'react-bootstrap/Card'
-// import CardGroup from 'react-bootstrap/CardGroup'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
-function App(){
-  return(
-  <Router>
-    <div className="App">
-      <Nav />
-      <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/about" component={About}/>
-      <Route path="/shop" component={Shop}/>
-      {/* <Route path="/cards" component={Cards}/> */}
-      </Switch>
-      </div>
-      </Router>
-  );
-}
-
-const Home = () => (
-  <div>
-    <h1>Home Page</h1>
-  </div>
-);
-
-export default App;
 // import React from 'react';
 // import Card from 'react-bootstrap/Card'
 // import CardGroup from 'react-bootstrap/CardGroup'
 
-// function App(){
+// function Cards(){
 //   return(
 //     <div>
 //       <CardGroup>
@@ -127,4 +93,4 @@ export default App;
 //   )
 // };
 
-// export default App;
+// export default Cards;
