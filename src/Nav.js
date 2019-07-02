@@ -11,13 +11,13 @@ function Nav(){
 
   return(
     <nav>
-        <h3>Logo</h3>
+        <h3>Chirper</h3>
         <ul className="nav-links">
-        <Link style={navStyle} to="/About">
-            <li>About</li>
+        <Link style={navStyle} to="/Feed">
+            <li>Feed</li>
         </Link>
-        <Link to="/Shop" style={navStyle}>
-            <li >Shop</li>
+        <Link to="/Login" style={navStyle}>
+            <li >Login</li>
             </Link>
         </ul>
     </nav>

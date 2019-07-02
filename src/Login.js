@@ -1,26 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+import React, {useState, useEffect} from 'react';
+import Card from 'react-bootstrap/Card'
+import CardGroup from 'react-bootstrap/CardGroup'
 
-
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+function Login(){
+    useEffect(() => {
+        fetchItems();
+    },[]);
     
-    <title>Chirper</title>
-  </head> 
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    const [items, setItems] = useState([]);
 
-</head>
-<body>
+    const fetchItems = async () => {
+        const data = await fetch('');
+    
+    const items = await data.json();
+    console.log(items.items);
+    setItems(items.items);
+};
 
-<div class="container">
+
+
+  return(
+      
+    <div>
+        {/* {items.map(item => (
+            <h1>{item.name}</h1>
+        ))} */}
+    </div>
+  );
+}
+
+export default Login;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <div class="container">
   <form action="/action_page.php">
     <div class="row">
       <h2 style="text-align:center">Login with Social Media or Manually</h2>
@@ -31,12 +57,12 @@
       <div class="col">
         <a href="#" class="fb btn">
           <i class="fa fa-facebook fa-fw"></i> Login with Facebook
-         </a>
+        </a>
         <a href="#" class="twitter btn">
           <i class="fa fa-twitter fa-fw"></i> Login with Twitter
         </a>
-        <a href="#" class="google btn"><i class="fa fa-google fa-fw">
-          </i> Login with Google+
+        <a href="#" class="google btn">
+          <i class="fa fa-google fa-fw"></i> Login with Google+
         </a>
       </div>
 
@@ -49,7 +75,7 @@
         <input type="password" name="password" placeholder="Password" required>
         <input type="submit" value="Login">
       </div>
-      
+
     </div>
   </form>
 </div>
@@ -63,6 +89,4 @@
       <a href="#" style="color:white" class="btn">Forgot password?</a>
     </div>
   </div>
-</div>
-  </body>
-</html>
+</div> */}

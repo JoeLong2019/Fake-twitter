@@ -2,8 +2,8 @@ import React from 'react';
 // import logo from '/logo.svg'
 import './App.css';
 import Nav from './Nav';
-import About from './About';
-import Shop from './Shop';
+import Feed from './Feed';
+import Login from './Login';
 // import Cards from './Cards';
 // import Card from 'react-bootstrap/Card'
 // import CardGroup from 'react-bootstrap/CardGroup'
@@ -16,8 +16,8 @@ function App(){
       <Nav />
       <Switch>
       <Route path="/" exact component={Home} />
-      <Route path="/about" component={About}/>
-      <Route path="/shop" component={Shop}/>
+      <Route path="/Feed" component={Feed}/>
+      <Route path="/Login" component={Login}/>
       {/* <Route path="/cards" component={Cards}/> */}
       </Switch>
       </div>
@@ -27,7 +27,6 @@ function App(){
 
 const Home = () => (
   <div>
-    <h1>Home Page</h1>
   </div>
 );
 
