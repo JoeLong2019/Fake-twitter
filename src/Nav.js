@@ -19,6 +19,7 @@ function Nav(){
         <Link to="/Login" style={navStyle}>
             <li >Login</li>
             </Link>
+            <Link to="/"style={navStyle}> <li>Chirper/Home</li></Link>
         </ul>
     </nav>
   );
